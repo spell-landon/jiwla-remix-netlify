@@ -10,6 +10,7 @@ import {
 } from '@remix-run/react';
 import styles from './styles/app.css';
 import Layout from './components/Global/Layout';
+import favicon from 'public/favicon.ico';
 import favicon_16_16 from 'public/favicon-16x16.png';
 import favicon_32_32 from 'public/favicon-32x32.png';
 import site_manifest from 'public/site.webmanifest';
@@ -38,6 +39,8 @@ export default function App() {
         <meta name='msapplication-TileColor' content='#874142' />
         <meta name='theme-color' content='#ffffff'></meta>
 
+        <link rel='icon' type='image/svg+xml' href={favicon} />
+        <link rel='icon' type='image/x-icon' href={favicon} />
         <link rel='apple-touch-icon' sizes='180x180' href={apple_touch_icon} />
         <link rel='icon' type='image/png' sizes='32x32' href={favicon_32_32} />
         <link rel='icon' type='image/png' sizes='16x16' href={favicon_16_16} />
