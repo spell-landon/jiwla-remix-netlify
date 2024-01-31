@@ -8,26 +8,26 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
-import tailwindStylesheet from './styles/app.css';
+import styles from './styles/app.css';
 import Layout from './components/Global/Layout';
 import favicon_16_16 from 'public/favicon-16x16.png';
 import favicon_32_32 from 'public/favicon-32x32.png';
 import site_manifest from 'public/site.webmanifest';
 import apple_touch_icon from 'public/apple-touch-icon.png';
 import { COMPANY_INFO } from './lib/const';
-const { companyName } = COMPANY_INFO;
 
-export const meta: MetaFunction = () => [
-  {
-    charset: 'utf-8',
-    title: companyName,
-    viewport: 'width=device-width,initial-scale=1',
-  },
-];
-
-export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: tailwindStylesheet }];
+export const meta: MetaFunction = () => {
+  const { companyName } = COMPANY_INFO;
+  return [
+    {
+      charset: 'utf-8',
+      title: companyName,
+      viewport: 'width=device-width,initial-scale=1',
+    },
+  ];
 };
+
+export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
 
 export default function App() {
   return (
