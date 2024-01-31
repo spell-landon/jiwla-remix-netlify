@@ -1,4 +1,3 @@
-import type { MetaFunction } from '@remix-run/node';
 import { cssBundleHref } from '@remix-run/css-bundle';
 import type { LinksFunction } from '@remix-run/node';
 import {
@@ -16,15 +15,6 @@ import favicon_32_32 from 'public/favicon-32x32.png';
 import site_manifest from 'public/site.webmanifest';
 import apple_touch_icon from 'public/apple-touch-icon.png';
 import { COMPANY_INFO } from './lib/const';
-const { companyName } = COMPANY_INFO;
-
-export const meta: MetaFunction = () => [
-  {
-    charset: 'utf-8',
-    title: companyName,
-    viewport: 'width=device-width,initial-scale=1',
-  },
-];
 
 export const links: LinksFunction = () => {
   return [
@@ -38,10 +28,13 @@ export const links: LinksFunction = () => {
 };
 
 export default function App() {
+  const { companyName } = COMPANY_INFO;
   return (
     <html lang='en'>
       <head>
-        <Meta />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>{companyName}</title>
         <meta name='msapplication-TileColor' content='#874142' />
         <meta name='theme-color' content='#ffffff'></meta>
 
@@ -59,6 +52,7 @@ export default function App() {
         <link
           href='https://fonts.googleapis.com/css2?family=Sono:wght@300&family=Special+Elite&family=Stardos+Stencil:wght@400;700&family=Teko:wght@300&display=swap'
           rel='stylesheet'></link>
+        <Meta />
         <Links />
       </head>
       <body className='font-SpecialElite bg-tertiary/50'>
