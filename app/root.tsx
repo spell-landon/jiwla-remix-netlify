@@ -1,5 +1,4 @@
 import type { MetaFunction } from '@remix-run/node';
-import { cssBundleHref } from '@remix-run/css-bundle';
 import type { LinksFunction } from '@remix-run/node';
 import {
   Links,
@@ -27,14 +26,7 @@ export const meta: MetaFunction = () => [
 ];
 
 export const links: LinksFunction = () => {
-  return [
-    ...(cssBundleHref
-      ? [
-          { rel: 'stylesheet', href: cssBundleHref },
-          { rel: 'stylesheet', href: tailwindStylesheet },
-        ]
-      : [{ rel: 'stylesheet', href: tailwindStylesheet }]),
-  ];
+  return [{ rel: 'stylesheet', href: tailwindStylesheet }];
 };
 
 export default function App() {
