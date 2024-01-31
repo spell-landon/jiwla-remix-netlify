@@ -1,4 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
+import { cssBundleHref } from '@remix-run/css-bundle';
 import type { LinksFunction } from '@remix-run/node';
 import {
   Links,
@@ -15,19 +16,26 @@ import favicon_32_32 from 'public/favicon-32x32.png';
 import site_manifest from 'public/site.webmanifest';
 import apple_touch_icon from 'public/apple-touch-icon.png';
 import { COMPANY_INFO } from './lib/const';
+const { companyName } = COMPANY_INFO;
 
-export const meta: MetaFunction = () => {
-  const { companyName } = COMPANY_INFO;
+export const meta: MetaFunction = () => [
+  {
+    charset: 'utf-8',
+    title: companyName,
+    viewport: 'width=device-width,initial-scale=1',
+  },
+];
+
+export const links: LinksFunction = () => {
   return [
-    {
-      charset: 'utf-8',
-      title: companyName,
-      viewport: 'width=device-width,initial-scale=1',
-    },
+    ...(cssBundleHref
+      ? [
+          { rel: 'stylesheet', href: cssBundleHref },
+          { rel: 'stylesheet', href: styles },
+        ]
+      : [{ rel: 'stylesheet', href: styles }]),
   ];
 };
-
-export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
 
 export default function App() {
   return (
