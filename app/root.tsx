@@ -9,7 +9,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
-import tailwindStylesheet from '../tailwind.css';
+import tailwindStylesheet from './styles/app.css';
 import Layout from './components/Global/Layout';
 import favicon_16_16 from '../public/favicon-16x16.png';
 import favicon_32_32 from '../public/favicon-32x32.png';
