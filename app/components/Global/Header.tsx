@@ -1,8 +1,7 @@
 import clsx from 'clsx';
-import { Phone } from '@mui/icons-material';
 import { COMPANY_INFO } from '~/lib/const';
 import { useWindowDimensions } from '~/hooks/useWindowDimensions';
-import jiwla_logo_transparent from '~/media/jiwla_logo_transparent.png';
+import jiwla_logo_transparent from 'public/assets/jiwla_logo_transparent.png';
 import { Link } from '@remix-run/react';
 import PhoneButton from '../PhoneButton';
 

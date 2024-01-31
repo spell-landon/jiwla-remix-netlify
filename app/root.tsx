@@ -11,10 +11,10 @@ import {
 } from '@remix-run/react';
 import tailwindStylesheet from './styles/app.css';
 import Layout from './components/Global/Layout';
-import favicon_16_16 from '../public/favicon-16x16.png';
-import favicon_32_32 from '../public/favicon-32x32.png';
-import site_manifest from '../public/site.webmanifest';
-import apple_touch_icon from '../public/apple-touch-icon.png';
+import favicon_16_16 from 'public/favicon-16x16.png';
+import favicon_32_32 from 'public/favicon-32x32.png';
+import site_manifest from 'public/site.webmanifest';
+import apple_touch_icon from 'public/apple-touch-icon.png';
 import { COMPANY_INFO } from './lib/const';
 const { companyName } = COMPANY_INFO;
 

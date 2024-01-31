@@ -1,8 +1,8 @@
 import { Link } from '@remix-run/react';
 import clsx from 'clsx';
 import { COMPANY_INFO } from '~/lib/const';
-import map from '~/media/map.png';
-import jiwla_logo_transparent from '~/media/jiwla_logo_transparent.png';
+import map from 'public/assets/map.png';
+import jiwla_logo_transparent from 'public/assets/jiwla_logo_transparent.png';
 import PhoneButton from '../PhoneButton';
 
 const Footer = () => {
