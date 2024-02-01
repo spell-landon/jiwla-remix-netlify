@@ -22,6 +22,7 @@ export default {
         StardosStencil: ["'Stardos Stencil'", 'system-ui'],
         Teko: ["'Teko'", 'system-ui'],
         Sono: ["'Sono'", 'system-ui'],
+        Rajdhani: ["'Rajdhani'", 'system-ui'],
       },
       width: {
         '7xl': '1172px',

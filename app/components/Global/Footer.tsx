@@ -6,7 +6,7 @@ import jiwla_logo_transparent from 'public/assets/jiwla_logo_transparent.png';
 import PhoneButton from '../PhoneButton';
 
 const Footer = () => {
-  const { addressUrl, companyName } = COMPANY_INFO;
+  const { addressUrl, companyName, license } = COMPANY_INFO;
   return (
     <div
       className={clsx(
@@ -20,6 +20,9 @@ const Footer = () => {
           <img src={jiwla_logo_transparent} alt='' className='w-24' />
           <span className='w-full max-w-36 font-StardosStencil uppercase font-bold text-secondary leading-tight text-center md:text-left'>
             {companyName}
+          </span>
+          <span className='w-full text-center md:text-left'>
+            {license.title} # {license.number}
           </span>
           <PhoneButton />
         </div>

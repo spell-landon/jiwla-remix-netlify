@@ -15,7 +15,7 @@ const Header = () => {
           'w-full max-w-7xl mx-auto px-4 flex justify-between items-center'
         )}>
         {/* Logo */}
-        <Link to='/'>
+        <Link to='/' className='cursor-pointer'>
           <div className='w-fit flex gap-2 items-center'>
             <img src={jiwla_logo_transparent} alt='' className='w-16 md:w-20' />
             <h1 className='w-fit md:w-[45%] font-StardosStencil uppercase font-bold text-secondary leading-tight'>

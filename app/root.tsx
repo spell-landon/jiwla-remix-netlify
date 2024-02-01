@@ -53,12 +53,12 @@ export default function App() {
           crossOrigin='true'
         />
         <link
-          href='https://fonts.googleapis.com/css2?family=Sono:wght@300&family=Special+Elite&family=Stardos+Stencil:wght@400;700&family=Teko:wght@300&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Sono:wght@300&family=Special+Elite&family=Stardos+Stencil:wght@400;700&family=Teko:wght@300&family=Rajdhani:wght@300;400;500;600;700&display=swap'
           rel='stylesheet'></link>
         <Meta />
         <Links />
       </head>
-      <body className='font-SpecialElite bg-tertiary/50'>
+      <body className='font-SpecialElite bg-tertiary/20'>
         <Layout>
           <Outlet />
           <ScrollRestoration />
